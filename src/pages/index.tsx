@@ -1,5 +1,12 @@
-import Main from "components/Main";
+import { GetServerSideProps } from "next";
+import { Home } from "views/Home";
 
-export default function Home() {
-  return <Main />;
+export default function Index(props: any) {
+  return <Home />;
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  return {
+    props: {}
+  };
+};
